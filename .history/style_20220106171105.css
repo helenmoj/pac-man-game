@@ -31,22 +31,10 @@
 }
 
 .pinky {
-    background-color: pink;
-}
-
-.inky {
-    background-color: cyan;
-}
-
-.clyde {
-    background-color: orange;
+    background
 }
 
 .pac-man {
     background-color: yellow;
     border-radius: 10px;
-}
-
-.scared-ghost {
-    background-color: aquamarine;
 }

@@ -206,28 +206,28 @@ document.addEventListener('DOMContentLoaded', () => {
         squares[ghost.currentIndex].classList.remove(ghost.className, 'ghost', 'scared-ghost');
         ghost.currentIndex = ghost.startIndex;
         score +=100;
-        squares[ghost.currentIndex].classList.add(ghost.className, 'ghost');
+        squares[ghost.currentIndex].classList.add(ghost.className, 'ghost')
       }
-    checkForGameOver();
-    }, ghost.speed);
+    checkForGameOver()
+    }, ghost.speed)
   }
 
   //check for a game over
   function checkForGameOver() {
     if (squares[pacmanCurrentIndex].classList.contains('ghost') &&
       !squares[pacmanCurrentIndex].classList.contains('scared-ghost')) {
-      ghosts.forEach(ghost => clearInterval(ghost.timerId));
-      document.removeEventListener('keyup', movePacman);
-      setTimeout(function(){ alert("Game Over"); }, 500);
+      ghosts.forEach(ghost => clearInterval(ghost.timerId))
+      document.removeEventListener('keyup', movePacman)
+      setTimeout(function(){ alert("Game Over"); }, 500)
     }
   }
 
   //check for a win - more is when this score is reached
   function checkForWin() {
     if (score === 274) {
-      ghosts.forEach(ghost => clearInterval(ghost.timerId));
-      document.removeEventListener('keyup', movePacman);
-      setTimeout(function(){ alert("You have WON!"); }, 500);
+      ghosts.forEach(ghost => clearInterval(ghost.timerId))
+      document.removeEventListener('keyup', movePacman)
+      setTimeout(function(){ alert("You have WON!"); }, 500)
     }
   }
-});
+})
